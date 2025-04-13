@@ -123,8 +123,6 @@ REACT_APP_YOUTUBE_SEARCH_URL=your_api_url
 
 ## 👥 Authors
 
-- [@Ricky Dey](https://github.com/Ricky2054)
+- [Yuvraj Prasad](https://github.com/YuvisTechPoint)
 - [@Sorbojit Mondal](https://github.com/33sorbojitmondal)
-- [@Ashutosh Saha](https://github.com/Ash310u)
 - [@Anurag Dey](https://github.com/anuragcode-16)
-- [@Piyush Goenka](https://github.com/piyushgoenka2005)
