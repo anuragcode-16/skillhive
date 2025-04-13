@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="#f8fafc"/>
+  
+  <!-- Title -->
+  <text x="400" y="40" font-family="Arial" font-size="24" text-anchor="middle" font-weight="bold" fill="#1e293b">SkillHive System - Data Flow Diagram</text>
+  
+  <!-- External Entities (Squares with double lines) -->
+  <!-- User -->
+  <rect x="50" y="120" width="120" height="60" fill="white" stroke="#334155" stroke-width="2" rx="5"/>
+  <rect x="55" y="125" width="110" height="50" fill="white" stroke="#334155" stroke-width="2" rx="3"/>
+  <text x="110" y="155" font-family="Arial" font-size="14" text-anchor="middle" fill="#334155">User</text>
+  
+  <!-- External API -->
+  <rect x="50" y="420" width="120" height="60" fill="white" stroke="#334155" stroke-width="2" rx="5"/>
+  <rect x="55" y="425" width="110" height="50" fill="white" stroke="#334155" stroke-width="2" rx="3"/>
+  <text x="110" y="455" font-family="Arial" font-size="14" text-anchor="middle" fill="#334155">Google AI API</text>
+  
+  <!-- Database -->
+  <rect x="630" y="270" width="120" height="60" fill="white" stroke="#334155" stroke-width="2" rx="5"/>
+  <rect x="635" y="275" width="110" height="50" fill="white" stroke="#334155" stroke-width="2" rx="3"/>
+  <text x="690" y="305" font-family="Arial" font-size="14" text-anchor="middle" fill="#334155">Database</text>
+  
+  <!-- Processes (Circles) -->
+  <!-- Authentication -->
+  <circle cx="300" y="150" r="50" fill="#dbeafe" stroke="#3b82f6" stroke-width="2"/>
+  <text x="300" y="150" font-family="Arial" font-size="14" text-anchor="middle" font-weight="bold" fill="#1e40af">1.0</text>
+  <text x="300" y="170" font-family="Arial" font-size="12" text-anchor="middle" fill="#1e40af">Authentication</text>
+  
+  <!-- CV Analysis -->
+  <circle cx="300" y="300" r="50" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="300" y="300" font-family="Arial" font-size="14" text-anchor="middle" font-weight="bold" fill="#92400e">2.0</text>
+  <text x="300" y="320" font-family="Arial" font-size="12" text-anchor="middle" fill="#92400e">CV Analysis</text>
+  
+  <!-- Job Matching -->
+  <circle cx="300" y="450" r="50" fill="#dcfce7" stroke="#22c55e" stroke-width="2"/>
+  <text x="300" y="450" font-family="Arial" font-size="14" text-anchor="middle" font-weight="bold" fill="#166534">3.0</text>
+  <text x="300" y="470" font-family="Arial" font-size="12" text-anchor="middle" fill="#166534">Job Matching</text>
+  
+  <!-- Data Stores (Open-ended rectangles) -->
+  <!-- User Data -->
+  <line x1="500" y1="140" x2="630" y2="140" stroke="#334155" stroke-width="2"/>
+  <line x1="500" y1="140" x2="500" y2="170" stroke="#334155" stroke-width="2"/>
+  <line x1="500" y1="170" x2="630" y2="170" stroke="#334155" stroke-width="2"/>
+  <text x="565" y="160" font-family="Arial" font-size="14" text-anchor="middle" fill="#334155">D1: User Profiles</text>
+  
+  <!-- CV Storage -->
+  <line x1="500" y1="290" x2="630" y2="290" stroke="#334155" stroke-width="2"/>
+  <line x1="500" y1="290" x2="500" y2="320" stroke="#334155" stroke-width="2"/>
+  <line x1="500" y1="320" x2="630" y2="320" stroke="#334155" stroke-width="2"/>
+  <text x="565" y="310" font-family="Arial" font-size="14" text-anchor="middle" fill="#334155">D2: CV Storage</text>
+  
+  <!-- Job Listings -->
+  <line x1="500" y1="440" x2="630" y2="440" stroke="#334155" stroke-width="2"/>
+  <line x1="500" y1="440" x2="500" y2="470" stroke="#334155" stroke-width="2"/>
+  <line x1="500" y1="470" x2="630" y2="470" stroke="#334155" stroke-width="2"/>
+  <text x="565" y="460" font-family="Arial" font-size="14" text-anchor="middle" fill="#334155">D3: Job Listings</text>
+  
+  <!-- Data Flows (Arrows) -->
+  <!-- User to Authentication -->
+  <line x1="170" y1="150" x2="250" y2="150" stroke="#64748b" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="210" y="140" font-family="Arial" font-size="12" text-anchor="middle" fill="#64748b">Credentials</text>
+  
+  <!-- Authentication to User -->
+  <line x1="245" y1="170" x2="170" y2="170" stroke="#64748b" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="210" y="190" font-family="Arial" font-size="12" text-anchor="middle" fill="#64748b">Auth Token</text>
+  
+  <!-- Authentication to User Data -->
+  <line x1="350" y1="150" x2="500" y2="150" stroke="#64748b" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="425" y="140" font-family="Arial" font-size="12" text-anchor="middle" fill="#64748b">Store User Info</text>
+  
+  <!-- User to CV Analysis -->
+  <line x1="110" y1="180" x2="110" y2="300" stroke="#64748b" stroke-width="2"/>
+  <line x1="110" y1="300" x2="250" y2="300" stroke="#64748b" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="180" y="290" font-family="Arial" font-size="12" text-anchor="middle" fill="#64748b">Upload CV</text>
+  
+  <!-- CV Analysis to CV Storage -->
+  <line x1="350" y1="300" x2="500" y2="300" stroke="#64748b" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="425" y="290" font-family="Arial" font-size="12" text-anchor="middle" fill="#64748b">Processed CV Data</text>
+  
+  <!-- CV Analysis to External API -->
+  <line x1="280" y1="350" x2="180" y2="420" stroke="#64748b" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="200" y="390" font-family="Arial" font-size="12" text-anchor="middle" fill="#64748b">Text Analysis Request</text>
+  
+  <!-- External API to CV Analysis -->
+  <line x1="170" y1="400" x2="260" y2="330" stroke="#64748b" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="190" y="350" font-family="Arial" font-size="12" text-anchor="middle" fill="#64748b">AI Analysis Results</text>
+  
+  <!-- User to Job Matching -->
+  <line x1="110" y1="180" x2="110" y2="450" stroke="#64748b" stroke-width="2"/>
+  <line x1="110" y1="450" x2="250" y2="450" stroke="#64748b" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="180" y="440" font-family="Arial" font-size="12" text-anchor="middle" fill="#64748b">Search Criteria</text>
+  
+  <!-- CV Storage to Job Matching -->
+  <line x1="500" y1="320" x2="400" y2="400" stroke="#64748b" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="430" y="370" font-family="Arial" font-size="12" text-anchor="middle" fill="#64748b">Skills Data</text>
+  
+  <!-- Job Matching to Job Listings -->
+  <line x1="350" y1="450" x2="500" y2="450" stroke="#64748b" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="425" y="440" font-family="Arial" font-size="12" text-anchor="middle" fill="#64748b">Store Matched Jobs</text>
+  
+  <!-- Job Matching to External API -->
+  <line x1="260" y1="480" x2="170" y2="450" stroke="#64748b" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="220" y="480" font-family="Arial" font-size="12" text-anchor="middle" fill="#64748b">Job Generation Request</text>
+  
+  <!-- Job Matching to User -->
+  <line x1="260" y1="420" x2="130" y2="180" stroke="#64748b" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="170" y="290" font-family="Arial" font-size="12" text-anchor="middle" fill="#64748b">Job Results</text>
+  
+  <!-- All Data Stores to Database -->
+  <line x1="630" y1="155" x2="690" y2="270" stroke="#64748b" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="630" y1="305" x2="660" y2="305" stroke="#64748b" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="630" y1="455" x2="690" y2="330" stroke="#64748b" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Arrow Definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#64748b"/>
+    </marker>
+  </defs>
+</svg> 
